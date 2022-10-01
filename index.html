@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>مكة لنقل العفش </title>
+<meta name="generator" content="WYSIWYG Web Builder 17 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cairo:400,700,900&display=swap" rel="stylesheet">
+<link href="css/ragab-mekka2.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.carousel.effects.min.js"></script>
+<script src="util.min.js"></script>
+<script src="carousel.min.js"></script>
+<script src="wb.panel.min.js"></script>
+<script src="wwb17.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#wb_service1').addClass('visibility-hidden');
+      $('#wb_service2').addClass('visibility-hidden');
+      $('#wb_service3').addClass('visibility-hidden');
+      var Carousel1Opts =
+      {
+         delay: 1200,
+         duration: 500,
+         easing: 'easeInQuad',
+         mode: 'clip',
+         direction: 'vertical',
+         scalemode: 3,
+         pagination: true,
+         pause: null,
+         start: 0
+      };
+      $("#Carousel1").carouseleffects(Carousel1Opts);
+      $("#Carousel1_back a").click(function()
+      {
+         $('#Carousel1').carouseleffects('prev');
+      });
+      $("#Carousel1_next a").click(function()
+      {
+         $('#Carousel1').carouseleffects('next');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-80 }, 600, 'linear');
+      });
+      $("a[href*='#planTripLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#planTripLayoutGrid').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      $("#attractionsCarousel").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               $('#Carousel2').bootstrapcarousel(0);
+               break;
+         }
+      });
+      $("#attractionsCarousel").bootstrapcarousel({interval:0, pause: false});
+      function onScrollservice1()
+      {
+         var $obj = $("#wb_service1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_service1', 'transform-scale-in', 100, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_service1', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_service1').inViewPort(true))
+      {
+         $('#wb_service1').addClass("in-viewport");
+      }
+      onScrollservice1();
+      $(window).scroll(function(event)
+      {
+         onScrollservice1();
+      });
+      function onScrollservice2()
+      {
+         var $obj = $("#wb_service2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_service2', 'transform-scale-in', 100, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_service2', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_service2').inViewPort(true))
+      {
+         $('#wb_service2').addClass("in-viewport");
+      }
+      onScrollservice2();
+      $(window).scroll(function(event)
+      {
+         onScrollservice2();
+      });
+      function onScrollservice3()
+      {
+         var $obj = $("#wb_service3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_service3', 'transform-scale-in', 100, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_service3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_service3').inViewPort(true))
+      {
+         $('#wb_service3').addClass("in-viewport");
+      }
+      onScrollservice3();
+      $(window).scroll(function(event)
+      {
+         onScrollservice3();
+      });
+      $("#headerPanelMenu").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'left', toggle: true});
+      $("#headerPanelMenu_markup ul li a").click(function(event)
+      {
+          $.panel.hide($("#headerPanelMenu_panel"));
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_searchOpen">
+                  <a href="#" onclick="ShowObjectWithEffect('searchInput', 1, 'slideright', 500);ShowObjectWithEffect('wb_searchClose', 1, 'fade', 1);ShowObjectWithEffect('wb_searchOpen', 0, 'fade', 1);return false;"><div id="searchOpen"><i class="fa fa-search"></i></div></a>
+               </div>
+               <div id="wb_searchClose">
+                  <a href="#" onclick="ShowObjectWithEffect('searchInput', 0, 'slideright', 500);ShowObjectWithEffect('wb_searchClose', 0, 'fade', 1);ShowObjectWithEffect('wb_searchOpen', 1, 'fade', 1);return false;"><div id="searchClose"><i class="fa fa-times"></i></div></a>
+               </div>
+               <input type="text" id="searchInput" name="إبحث" value="" spellcheck="false" placeholder="إبحث">
+               <div id="wb_headerPanelMenu">
+                  <a href="#headerPanelMenu_markup" id="headerPanelMenu">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                  </a>
+                  <div id="headerPanelMenu_markup">
+                     <ul role="menu">
+                        <li role="menuitem"><a href="#contact" class="nav-link">&#1604;&#1604;&#1578;&#1608;&#1575;&#1589;&#1604;</a></li>
+                        <li role="menuitem"><a href="#planTrip" class="nav-link">&#1593;&#1606; &#1575;&#1604;&#1588;&#1585;&#1603;&#1577;</a></li>
+                        <li role="menuitem"><a href="#services" class="nav-link">&#1582;&#1583;&#1605;&#1575;&#1578;&#1606;&#1575;</a></li>
+                        <li role="menuitem"><a href="#header" class="nav-link">&#1575;&#1604;&#1585;&#1574;&#1610;&#1587;&#1610;&#1577;</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_headerBreadcrumb">
+                  <ul id="headerBreadcrumb">
+                     <li><a href="#contact">.</a></li>
+                     <li><a href="#contact">للتواصل</a></li>
+                     <li><a href="#planTripLayoutGrid">عن الشركة</a></li>
+                     <li><a href="#services">خدماتنا</a></li>
+                     <li><a href="#header">الرئيسية</a></li>
+                  </ul>
+               </div>
+               <div id="wb_Text1">
+                  <span style="color:#FFFFFF;font-family:Cairo;font-size:19px;"><strong>شركة مكة لنقل العفش</strong></span>
+               </div>
+               <div id="wb_Image3">
+                  <img src="images/truck-logo-free-vector.png" id="Image3" alt="" width="565" height="448">
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_Text9">
+                  <span style="color:#000000;font-family:Cairo;font-size:17px;">إتصل على&nbsp;&nbsp;&nbsp;&nbsp; 01008527597</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid11">
+      <div id="LayoutGrid11">
+         <div class="row">
+            <div class="col-1">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid10">
+      <div id="LayoutGrid10">
+         <div class="row">
+            <div class="col-1">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid7">
+      <div id="LayoutGrid7">
+         <div class="row">
+            <div class="col-1">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid8">
+      <div id="LayoutGrid8">
+         <div class="row">
+            <div class="col-1">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid9">
+      <div id="LayoutGrid9">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text12">
+&nbsp;
+               </div>
+               <div id="wb_Text13">
+                  <p style="font-size:13px;line-height:25px;font-weight:bold;"><span style="font-size:16px;line-height:30px;font-weight:normal;">توفر لك شركه مكة لنقل و رفع و تغليف الاثاث افضل خطوات لنقل و تغليف العفش بشكل سليم و بطريقة مميزة و بدون أى خدوش حيث وفرنا ل</span></p>
+               </div>
+               <div id="wb_Text15">
+                  <p style="font-weight:bold;">&nbsp;اولا تجهيز سيارات نقل العفش بالحجم المميز<span style="font-size:20px;line-height:37.5px;">&nbsp;</span><span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">ثانيا تجهيز عدد عمالة و فنيين لفك وتركيب الاثاث<span style="font-size:20px;line-height:37.5px;">&nbsp;</span><span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">&nbsp;تواجد اوناش رفع الاثاث بارخص اسعار&nbsp; <span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">&nbsp;كراتين و تغليف الاثاث المنزلي<span style="font-size:20px;line-height:37.5px;">&nbsp;</span><span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">نقل الاثاث بفيصل و المريوطيه<span style="font-size:20px;line-height:37.5px;">&nbsp;</span><span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">تغليف الصينى و الأطباق و المعالق <span style="font-size:20px;line-height:37.5px;">&nbsp;</span><span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">&nbsp;</p>
+               </div>
+               <div id="wb_Text14">
+                  <span style="color:#000000;font-family:Cairo;font-size:15px;line-height:27px;">&#1578;&#1578;&#1605; &#1603;&#1604; &#1582;&#1591;&#1608;&#1577; &#1576;&#1605;&#1589;&#1583;&#1602;&#1610;&#1577; &#1608; &#1576;&#1590;&#1605;&#1610;&#1585; &#1608; &#1576;&#1583;&#1608;&#1606; &#1571;&#1609; &#1576;&#1584;&#1604; &#1578;&#1593;&#1576; &#1605;&#1606; &#1575;&#1604;&#1593;&#1605;&#1610;&#1604; &#1606;&#1581;&#1606; &#1606;&#1593;&#1583; &#1604;&#1603; &#1603;&#1604; &#1605;&#1575; &#1610;&#1604;&#1586;&#1605;&#1603; &#1608; &#1588;&#1585;&#1603;&#1607; مكة &#1578;&#1593;&#1583; &#1605;&#1606; &#1575;&#1601;&#1590;&#1604; &#1588;&#1585;&#1603;&#1575;&#1578; &#1606;&#1602;&#1604; &#1575;&#1604;&#1593;&#1601;&#1588; &#1576;&#1575;&#1604;&#1605;&#1593;&#1575;&#1583;&#1610; &#1601;&#1607;&#1609; &#1575;&#1604;&#1575;&#1603;&#1579;&#1585; &#1606;&#1580;&#1575;&#1581;&#1575; &#1608; &#1588;&#1607;&#1585;&#1577; &#1608; &#1605;&#1589;&#1583;&#1602;&#1610;&#1577; &#1604;&#1583;&#1609; &#1603;&#1604; &#1593;&#1605;&#1610;&#1604; &#1578;&#1578;&#1593;&#1575;&#1605;&#1604; &#1605;&#1593;&#1607;<br><br>&#1588;&#1607;&#1585;&#1578;&#1606;&#1575; &#1604;&#1605; &#1578;&#1571;&#1578;&#1609; &#1573;&#1604;&#1575; &#1576;&#1593;&#1583; &#1580;&#1607;&#1583; &#1603;&#1576;&#1610;&#1585; &#1608; &#1578;&#1601;&#1603;&#1610;&#1585; &#1593;&#1605;&#1610;&#1602; &#1604;&#1578;&#1591;&#1608;&#1610;&#1585; &#1582;&#1583;&#1605;&#1575;&#1578; &#1606;&#1602;&#1604; &#1575;&#1604;&#1605;&#1608;&#1576;&#1610;&#1604;&#1610;&#1575; &#1608; &#1578;&#1602;&#1583;&#1610;&#1605; &#1604;&#1604;&#1593;&#1605;&#1610;&#1604; &#1571;&#1601;&#1590;&#1604; &#1575;&#1587;&#1593;&#1575;&#1585; &#1608; &#1571;&#1593;&#1604;&#1609; &#1580;&#1608;&#1583;&#1577; &#1604;&#1583;&#1609; &#1588;&#1585;&#1603;&#1575;&#1578; &#1606;&#1602;&#1604; &#1575;&#1604;&#1593;&#1601;&#1588; &#1608;&#1587;&#1575;&#1574;&#1604; &#1608; &#1582;&#1583;&#1605;&#1575;&#1578; &#1605;&#1603;&#1579;&#1601;&#1577; &#1578;&#1588;&#1605;&#1604; &#1603;&#1604; &#1605;&#1575; &#1610;&#1601;&#1603;&#1585; &#1576;&#1607; &#1575;&#1604;&#1593;&#1605;&#1610;&#1604; &#1593;&#1606;&#1583; &#1575;&#1604;&#1575;&#1606;&#1578;&#1602;&#1575;&#1604; &#1604;&#1604;&#1587;&#1603;&#1606; &#1575;&#1604;&#1580;&#1583;&#1610;&#1583;<br></span><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><br></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid2">
+      <div id="LayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text2">
+                  <span style="color:#FFFFFF;"><strong>إتصل على<br>01098998438<br>01142353556</strong></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid4">
+      <div id="LayoutGrid4">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text5">
+                  <span style="color:#000000;font-family:Cairo;font-size:15px;line-height:27px;">خبرتنا فى مجال نقل العفش من سنوات جعلتنا من اوئل الشركات وافضلها لاننا نمتلك اسطول كامل مجهز لنقل العفش والاثاث<br>قبل ان تختار شركة نقل العفش والاثاث يمكنك الاطلاع لماذا تختار المدينة المنورة لنقل العفش والاثاث كذلك تستفيد من عرض ال 20% قبل </span><span style="color:#000000;font-family:Cairo;font-size:12px;line-height:27px;">انتهاء العرض<br></span><span style="color:#000000;font-family:Cairo;font-size:15px;line-height:27px;"><br>تتم عملية تغليف الاثاث مع شركة مكة بطرق سريعة و آمنة و نقوم بتدريب فرق العمل على تغليف انواع الموبيليا المختلفة و نوضح لكم طرق النقل و النزول بالاثاث عند تواصلكم معنا على </span><span style="color:#FF0000;font-family:Cairo;font-size:17px;line-height:33px;"><strong> - 01008527597</strong></span><span style="color:#000000;font-family:Cairo;font-size:15px;line-height:33px;"> كما تتميز شركات نقل العفش بتواجد اجهزة حديثة لرفع و تنزيل الموبيليا استفاد الان من الخدمات التى تقدمها شركة مكة التى تعد من ارقى شركات نقل الاثاث بالرحاب التى توفر لك اوناش و معدات غير عادية و نقدم سيارات رفع اثاث و اوناش متنوعة الأطوال و يعمل مع شركات نقل الاثاث بمدينتى أساليب تقدم من خلال عمال و فنيين و مشرفيين على العمل فى جميع الأماكن داخل القاهرة نقل الاثاث بالمقطم نقل الاثاث بالعبور نقل الاثاث بحدائق الاهرام و نقل الاثاث بحلوان نقل العفش فى مدينة نصر نقل الاثاث بالعاشر من رمضان<br><br></span>
+               </div>
+               <div id="wb_Image7">
+                  <img src="images/images (1).jpg" id="Image7" alt="" width="940" height="482">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid1">
+      <div id="LayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text3">
+                  <p>عروض و مهارات خاصة تتمتع بها شركه مكة لنقل الاثاث و تغليف الموبيليا كما تقدم عمالة متكاملة و أقوياء و يتصفون بالصدق و الأمانة و وفرت لك أيضا أشياءعديدة منها</p>
+                  <p>&nbsp;</p>
+               </div>
+               <div id="wb_Text4">
+&nbsp;
+               </div>
+               <div id="wb_Text11">
+                  <p style="font-weight:bold;">&nbsp;فك وتركيب التكييف<span style="font-size:20px;line-height:37.5px;">&nbsp;</span><span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">تغليف الاثاث&nbsp; <span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">تغليف أدوات الطعام&nbsp; <span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">فك وتركيب اللمبات و النجف <span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">فك وتركيب السخانات <span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">رفع الاثاث بالونش <span style="font-size:20px;line-height:37.5px;">.</span></p>
+                  <p style="font-weight:bold;">&nbsp;</p>
+               </div>
+               <div id="wb_Text10">
+                  <span style="color:#000000;font-family:Cairo;font-size:15px;line-height:27px;">توفر مكاتب نقل العفش عدد لا نهائى من المزايا و قامت شركات نقل الاثاث بمدينة نصر بوضع خطط غير مسبقة تحدد من خلال اهتمامات المستخدم و نحن جديرين ان تتم مرحلة نقل الاثاث بطريقة مختلفة تماما و آمنة و مريحة للعميل و تقوم هنا شركات نقل الاثاث التجمع الخامس و أتاحت للعميل سيارات يوجد بداخلها صندوق يعزل الموبيليا عن اى ضرر<br></span><span style="color:#000000;font-family:Arial;font-size:13px;line-height:16px;"><br></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid5">
+      <div id="LayoutGrid5">
+         <div class="col-1">
+            <input type="submit" id="Button4" name="نقل عفش بالمقطم" value="شركة نقل عفش بالمقطم">
+            <input type="submit" id="Button1" name="شركة نقل عفش بالشيخ زايد" value="شركة نقل عفش بالشيخ زايد">
+            <input type="submit" id="Button11" name="نقل عفش بالمعادى" value="شركة نقل عفش بالمعادى">
+            <input type="submit" id="Button2" name="نقل عفش بأكتوبر" value="شركة نقل عفش بأكتوبر ">
+            <input type="submit" id="Button9" name="شركة نقل اثاث بالتجمع الخامس" value="شركة نقل اثاث بالشروق">
+            <input type="submit" id="Button8" name="شركة نقل عفش بمدينة نصر" value="شركة نقل عفش بمدينة نصر">
+            <input type="submit" id="Button6" name="نقل أثاث بمدينتى" value="شركة نقل أثاث بمدينتى">
+            <input type="submit" id="Button7" name="نقل عفش بالمعادى" value="شركة نقل عفش بحدائق الاهرام ">
+            <input type="submit" id="Button10" name="نقل عفش بالمعادى" value="شركة نقل عفش بالقاهرة">
+            <input type="submit" id="Button12" name="نقل عفش بالمعادى" value="شركة نقل عفش  بمصر الجديدة">
+            <input type="submit" id="Button5" name="نقل أثاث بالتجمع الخامس" value="شركة نقل عفش بالهرم">
+            <input type="submit" id="Button3" name="نقل عفش بالمعادى" value="شركة نقل عفش بالجيزة">
+            <input type="submit" id="Button13" name="نقل عفش بالمعادى" value=" شركة نقل عفش  بالتجمع الخامس">
+            <input type="submit" id="Button14" name="نقل عفش بالمعادى" value="شـــركة نقل عفش بفيصل">
+         </div>
+      </div>
+   </div>
+   <div id="wb_Carousel1">
+      <div id="Carousel1">
+         <div class="frame frame-1">
+            <div class="carousel-innerframe">
+            </div>
+         </div>
+         <div class="frame frame-2" style="display:none">
+            <div class="carousel-innerframe">
+            </div>
+         </div>
+         <div class="frame frame-3" style="display:none">
+            <div class="carousel-innerframe">
+            </div>
+         </div>
+         <div class="frame frame-4" style="display:none">
+            <div class="carousel-innerframe">
+            </div>
+         </div>
+      </div>
+      <div id="Carousel1_back"><a class="carousel-control-prev" role="button"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a></div>
+      <div id="Carousel1_next"><a class="carousel-control-next" role="button"><span class="carousel-control-next-icon" aria-hidden="true"></span></a></div>
+   </div>
+   <div id="wb_LayoutGrid3">
+      <div id="LayoutGrid3">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Heading1">
+                  <h3 id="Heading1">نعمل على مدار الاسبوع والعطلات الرسمية </h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_LayoutGrid6">
+      <div id="LayoutGrid6">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Image4">
+                  <img src="images/14937303_401123236899951_447000790749914175_n.jpg" id="Image4" alt="" width="281" height="169">
+               </div>
+               <div id="wb_Text6">
+                  <span style="color:#000000;font-family:Cairo;font-size:15px;line-height:27px;"><br>تقدم شركة مكة سيارات على أحدث موديل قوية و مجهزة من اجل نقل الأثاث و الحفاظ علي جميع ممتلكاتك اثناء عمليات النقل الخاصة بك. شركة مكة تعد اسرع شركة نقل عش في مصر و دائما تجدها قريبة لبيتك بين يديك<br><br></span>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_Image5">
+                  <img src="images/1460774137_phone_logo_social_media.png" id="Image5" alt="" width="281" height="164">
+               </div>
+               <div id="wb_Text7">
+                  <span style="color:#000000;font-family:Cairo;font-size:15px;line-height:27px;"><br>شركة مكة تقدم&nbsp; خدمه نقل اثاث شامله و مثاليه تناسب جميع العملاء و نهدف دائما و نسعى الى تحقيق الراحه و السعاده و الاطمئنان للعميل و اسرته باحدث الطرق و الوسائل المستخدمه لنقل الاثاث و العفش فى مصر ونعد من افضل شركه نقل الأثاث لتواجدنا فى جميع محافظات مصر <br></span>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_Image6">
+                  <img src="images/17553713_734865273339995_8179692616770817852_n.jpg" id="Image6" alt="" width="281" height="155">
+               </div>
+               <div id="wb_Text8">
+                  <span style="color:#000000;font-family:Cairo;font-size:15px;line-height:27px;"><br>شركه مكة لنقل الاثاث تعتبر ارخص شركه نقل اثاث بمصرنعلم بمدى ارتفاع الاسعار و الظروف التى تمر بها البلد لذلك و لاننا افضل شركه نقل اثاث&nbsp; قمنا بتحطيم جميع الاسعار فى مجال نقل الاثاث حيث اننا نضع للعميل اقل التكاليف عند نقل الاثاث من مكان لاخر و نلتزم باتفاقنا مع العميل فى الهاتف من حيث التكلفه و المواعيد حيث اننا نقدر و نحاول بقدر الامكان انجاز المهمه فى اسرع وقت لعدم تعطيل العميل<br></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTrip">
+      <div id="planTrip">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_planTripHeading">
+                  <h2 id="planTripHeading">مميزات شركتنا</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services-overlay"></div>
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_service1">
+                  <span style="color:#E6711D;font-family:Cairo;font-size:20px;line-height:37px;"><strong>انقل عفش بيتك بالكامل باسعار لاتقبل المنافسة<br></strong></span><span style="color:#FFFFFF;font-family:Cairo;font-size:13px;line-height:27px;"><br></span><span style="color:#FFFFFF;font-family:Cairo;font-size:15px;line-height:27px;">لاننا نمتلك اكبر اسطول عربيات لنقل العفش والاثاث اسعارنا لاتقارن<br>الاسعار تختلف على حسب مكان النقل الى مكان الوصول لكن فى جميع الاحوال سوف تجد ان اسعارنا هى الاقل فى هذا السوق وذلك لاننا نمتلك اسطول عربيات متواجد فى معظم المحافظات<br></span>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_service2">
+                  <span style="color:#E6711D;font-family:Cairo;font-size:20px;line-height:37px;"><strong>عمالة مدربة ومخصصة لنقل العفش</strong><br></span><span style="color:#FFFFFF;font-family:Cairo;font-size:15px;line-height:27px;">يوجد لدينا فريق عمل على اعلى مستوى من الدقه و التركيز فى العمل نقوم دائما بتدريب كل عامل على الالتزام و الطريقه الصحيحه للنقل و السرعه فى الاداء لعدم اهدار وقت العميل و توفير له كل وسائل الراحه و الاطمئنان اثناء نقل الاثاث و لكل هذه الاسباب قدرنا نصبح من افضل شركات نقل الاثاث فى مصر</span>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_service3">
+                  <span style="color:#E6711D;font-family:Cairo;font-size:21px;line-height:40px;"><strong>ونش هيدروليكى للأدوار المرتفعة<br></strong></span><span style="color:#E6711D;font-family:Cairo;font-size:13px;line-height:33px;"><br></span><span style="color:#FFFFFF;font-family:Cairo;font-size:17px;line-height:33px;">نستخدم اوناش هيدروليكية مخصصة لرفع وتنزيل العفش من الأدوار العالية أو فى حالة السلالم الضيقة <br><br><br><br></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTripLayoutGrid">
+      <div id="planTripLayoutGrid">
+         <div id="wb_planTripCard3" class="card">
+            <div id="planTripCard3-card-body">
+               <div id="planTripCard3-card-item0"><i class="fa fa-money"></i></div>
+               <div id="planTripCard3-card-item1">السرعة والدقة فى نقل العفش</div>
+               <div id="planTripCard3-card-item2">توفر عليك الكثير من الأعمال الشاقة التي يجب أن تقوم بها قبل وبعد عملية نقل الموبيليا ، يتعرض الكثير منا إلى تغيير مكان معيشته حيث ينتقل إلى منزل أفضل أو يغير مكان عمله فيؤدي ذلك إلى تغيير مسكنه لذا عليه أن يقوم سريعًا بالقيام بنقل عفشه وذلك يتطلب العديد من الأعمال الشاقة التي يجب القيام بها لمحاولة الحفاظ على العفش ومقتنيات الشقة،</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard2" class="card">
+            <div id="planTripCard2-card-body">
+               <div id="planTripCard2-card-item0"><a href="./index.html"><i class="fa fa-users"></i></a></div>
+               <div id="planTripCard2-card-item1">عمالة مخصصة لنقل العفش بحرص شديد</div>
+               <div id="planTripCard2-card-item2">تعتمد شركتنا على العمالة المهنية والمخصصة للتعامل مع العفش ونقله بحرص وعناية كبيرة</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard1" class="card">
+            <div id="planTripCard1-card-body">
+               <div id="planTripCard1-card-item0"><i class="fa fa-clock-o"></i></div>
+               <div id="planTripCard1-card-item1">جميع خدمات نقل منزلك او شركتك فى مكان واحد</div>
+               <div id="planTripCard1-card-item2">سيارة نقل مغلقة بها اعدادات و تجهيزات كثيرة للتنقل بدون اى قلق على المنقولات<br>فريق عمل يتصف بالامانة و الخبرة و خاضع لتدريبات باشكال متعددة لتخطى اى مشكلة تواجه عند تحريك و نقل الموبيليا<br>اوناش هيدروليك لرفع الاثاث مهمتنا حمل الاثاث و الطلوع و النزول به بدون ما يمسه اى ضرر<br>فنى متخصص و خبرة فى مجال فك وتركيب غرف النوم و المعيشه و المطابخ بمختلف انواعها<br>مهندس تكييف لتنفيذ خدمة فك وتركيب التكييفات بمنتهى الدقه و لديه القدرة ايضا على صيانة جميع انواع الاجهزة<br>نوفر لكم اكثر من عامل متخصص فى تغليف الاثاث بكل انواعه و تغليف الصينى بخامات مميزة<br></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_banner">
+      <div id="banner-overlay"></div>
+      <div id="banner">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_bannerHeading1">
+                  <h2 id="bannerHeading1">عمالة مخصصة للتعامل مع الأثاث بعناية </h2>
+               </div>
+               <div id="wb_bannerHeading2">
+                  <h3 id="bannerHeading2">نعمل على مدار الاسبوع والعطلات الرسمية </h3>
+               </div>
+               <a id="bannerButton" href="tel:01008527597">خدمة 24 ساعة</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_attractions">
+      <div id="attractions">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_attractionsCarousel">
+                     <div id="attractionsCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                           <li data-target="#attractionsCarousel" data-slide-to="0" class="active"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <div class="carousel-item frame-1 active">
+                              <div class="carousel-innerframe">
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-item-left carousel-control" href="#attractionsCarousel" role="button" data-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-item-right carousel-control" href="#attractionsCarousel" role="button" data-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_attractionsText1">
+                     <span style="color:#000000;font-family:'Cairo';font-weight:900;font-size:16px;line-height:30px;"> شركة مكة لنقل الاثاث ترحب بكم و تتمنى ان تجدوا معنا كل ما يتطلب لنقل اثاث منازلكم بدون اضرار شركه مكة لنقل الاثاث افضل شركه نقل اثاث بمصر و هى التى سوف تتعاون معكم من اجل ان تقدم لكم كل الخدمات التى تحتاج لها قبل الانتقال حتى تصل بك الى منزلك الجديد بدون أى تأخير و باقل سعر سوف تنقل الاثاث</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeading">
+                  <h2 id="contactHeading">تواصل معنا فى أى وقت</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+            <path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+            <path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+         </svg></div>
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <a id="contactButton" href="tel:01008527597">تواصل معنا</a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_contactText3">
+                     <p style="font-size:27px;line-height:50px;"><span style="font-weight:bold;">تواصل معنا</span></p>
+                     <p style="font-family:Arial;font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-family:Arial;font-size:16px;line-height:18px;font-weight:bold;">&nbsp;</p>
+                     <p style="font-family:Arial;font-size:16px;line-height:18px;font-weight:bold;">01008527597</p>
+                     <p style="font-family:Arial;font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-family:Arial;font-size:16px;line-height:18px;font-weight:bold;"></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+               <div id="wb_footerText">
+                  <p><span style="background-color:#4F4F4F;">جميع الحقوق محفوظة لشركة مكة لنقل العفش</span><span style="background-color:#4F4F4F;"> © </span><span style="background-color:#4F4F4F;">2021</span></p>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_footerIcon1">
+                  <a href="./index.html" target="_blank"><div id="footerIcon1"><i class="fa fa-facebook-square"></i></div></a>
+               </div>
+               <div id="wb_footerIcon2">
+                  <a href="./index.html" target="_blank"><div id="footerIcon2"><i class="fa fa-instagram"></i></div></a>
+               </div>
+               <div id="wb_footerIcon3">
+                  <a href="./index.html" target="_blank"><div id="footerIcon3"><i class="fa fa-snapchat-ghost"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="Layer1">
+      <div id="wb_Image1">
+         <a href="tel:01008527597"><img src="images/free-phone-call-icon-535-thumb.png" id="Image1" alt="" width="66" height="66"></a></div>
+   </div>
+</body>
+</html>
